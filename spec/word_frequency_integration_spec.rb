@@ -12,6 +12,6 @@ describe('the word frequency path', :type => :feature) do
     fill_in('word', :with => 'cat')
     fill_in('string', :with => 'The Cat cat in the Hat')
     click_button('count')
-    expect(page).to(have_content(2))
+    expect(page).to(have_content('2'))
   end
 end
