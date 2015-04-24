@@ -61,11 +61,11 @@ describe('String#word_frequency') do
     expect('yak'.word_frequency('yaK')).to(eq(1))
   end
 
-  # # * The word given is in the string multiple times; output is in agreement.
-  # it('') do
-  #   expect(''.word_frequency()).to(eq())
-  # end
-  #
+  # * The word given is in the string multiple times; output is in agreement.
+  it('handles multiple occurances of the test word in the test string') do
+    expect('buffalo'.word_frequency('buffalo buffalo buffalo cats')).to(eq(3))
+  end
+
   # # * The word given is a subset of a larger word in the string, such as
   # #   'tac' is a subset of 'attack', appearing once; output is 0.
   # it('') do
