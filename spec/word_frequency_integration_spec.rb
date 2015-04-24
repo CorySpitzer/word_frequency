@@ -9,8 +9,8 @@ describe('the word frequency path', :type => :feature) do
   it('takes a word and a string from the user and returns the number of
       occurances of that word in the string') do
     visit('/')
-    fill_in('cat')
-    fill_in('The Cat cat in the Hat')
+    fill_in('word', :with => 'cat')
+    fill_in('string', :with => 'The Cat cat in the Hat')
     click_button('count')
     expect(page).to(have_content(2))
   end
