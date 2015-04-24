@@ -66,11 +66,6 @@ describe('String#word_frequency') do
     expect('buffalo'.word_frequency('buffalo buffalo buffalo cats')).to(eq(3))
   end
 
-  # * It has no problems ignoring basic punctuation.
-  it('ignores basic punctuation') do
-    expect('cat'.word_frequency('cat, cat; cat! cat? cat:')).to(eq(5))
-  end
-
 
   # # * The word given is a subset of a larger word in the string, such as
   # #   'tac' is a subset of 'attack', appearing once; output is 0.
