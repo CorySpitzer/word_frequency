@@ -15,6 +15,11 @@
 #
 #   Output: 3
 
+
+# ** Question for code review: How much should we consider program logic when
+#    designing our specs?
+
+
 require('rspec')
 require('word_frequency')
 
@@ -44,6 +49,16 @@ describe('String#word_frequency') do
   # * The word given is not in the one-word string; output is 0.
   it('returns 0 when the test word is not in a one-word test string') do
     expect('yak'.word_frequency('cat')).to(eq(0))
+  end
+
+  # * Capital letters shouldn't matter for the test word
+  it('handles capital letters in the test word') do
+    expect('Cat'.word_frequency('cat')).to(eq(1))
+  end
+
+  # * Capital letters shouldn't matter for the test string
+  it('handles capital letters in the test string') do
+    expect('yak'.word_frequency('yaK')).to(eq(1))
   end
 
   # # * The word given is in the string once; output is 1.
