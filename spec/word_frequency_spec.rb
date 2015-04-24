@@ -61,11 +61,6 @@ describe('String#word_frequency') do
     expect('yak'.word_frequency('yaK')).to(eq(1))
   end
 
-  # # * The word given is in the string once; output is 1.
-  # it('') do
-  #   expect(''.word_frequency()).to(eq())
-  # end
-  #
   # # * The word given is in the string multiple times; output is in agreement.
   # it('') do
   #   expect(''.word_frequency()).to(eq())
