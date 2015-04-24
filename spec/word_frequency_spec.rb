@@ -72,13 +72,14 @@ describe('String#word_frequency') do
     expect('tac'.word_frequency('attack back')).to(eq(0))
   end
 
-  # # * The word given is a subset of a larger word in the string that has the
-  # #   same first first letters, such as 'at' is a subset of 'attack';
-  # #   output is 0.
-  # it('') do
-  #   expect(''.word_frequency()).to(eq())
-  # end
-  #
+  # * The word given is a subset of a larger word in the string that has the
+  #   same first first letters, such as 'at' is a subset of 'attack';
+  #   output is 0.
+  it("doesn't count a subset of a word as the word itself
+      when they start with the same sequence of characters") do
+    expect('at'.word_frequency('attack')).to(eq(0))
+  end
+
   # # * The word given is a superset of another word, such as 'bat' is a superset
   # #   of 'at'; output is 0.
   # it('') do
