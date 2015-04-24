@@ -27,15 +27,15 @@ describe('String#word_frequency') do
   end
 
   # * The word given is empty but the string is not; output is 0.
-  it('returns 0 when the test word is empty but the string is not') do
+  it('returns 0 when the test word is empty but the test string is not') do
     expect(''.word_frequency('a')).to(eq(0))
   end
 
-  # # * The word given is not empty but the string is; output is 0.
-  # it('') do
-  #   expect(''.word_frequency()).to(eq())
-  # end
-  #
+  # * The word given is not empty but the string is; output is 0.
+  it('returns 0 when the test word is non-empty, but the test string is') do
+    expect('b'.word_frequency()).to(eq(0))
+  end
+
   # # * The word given is exactly the same as the string; output is 1.
   # it('') do
   #   expect(''.word_frequency()).to(eq())
