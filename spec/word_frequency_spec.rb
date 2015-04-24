@@ -66,13 +66,12 @@ describe('String#word_frequency') do
     expect('buffalo'.word_frequency('buffalo buffalo buffalo cats')).to(eq(3))
   end
 
+  # * The word given is a subset of a larger word in the string, such as
+  #   'tac' is a subset of 'attack'; output is 0.
+  it("doesn't count a subset of a word as the word itself") do
+    expect('tac'.word_frequency('attack back')).to(eq(0))
+  end
 
-  # # * The word given is a subset of a larger word in the string, such as
-  # #   'tac' is a subset of 'attack', appearing once; output is 0.
-  # it('') do
-  #   expect(''.word_frequency()).to(eq())
-  # end
-  #
   # # * The word given is a subset of a larger word in the string that has the
   # #   same first first letters, such as 'at' is a subset of 'attack';
   # #   output is 0.
