@@ -41,11 +41,11 @@ describe('String#word_frequency') do
     expect('cat'.word_frequency('cat')).to(eq(1))
   end
 
-  # # * The word given is not in the one-word string; output is 0.
-  # it('') do
-  #   expect(''.word_frequency()).to(eq())
-  # end
-  #
+  # * The word given is not in the one-word string; output is 0.
+  it('returns 0 when the test word is not in a one-word test string') do
+    expect('yak'.word_frequency('cat')).to(eq(0))
+  end
+
   # # * The word given is in the string once; output is 1.
   # it('') do
   #   expect(''.word_frequency()).to(eq())
