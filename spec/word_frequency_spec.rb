@@ -1,4 +1,6 @@
-# The following spec is in response to the prompt below:
+# The following spec is in response to the prompt below, from
+# learnhowtoprogram.com/lessons/ruby-bdd-sinatra-code-review-friday-classwork
+# accessed on April 24, 2015:
 #
 #   Create a website that uses a method to return how frequently a word
 #   appears in a given string. The user should be able to input both the
@@ -23,12 +25,12 @@ describe('String#word_frequency') do
   it('returns 0 when the test word is an empty string') do
     expect(''.word_frequency()).to(eq(0))
   end
-  
-  # # * The word given is empty but the string is not; output is 0.
-  # it('') do
-  #   expect(''.word_frequency()).to(eq())
-  # end
-  #
+
+  # * The word given is empty but the string is not; output is 0.
+  it('returns 0 when the test word is empty but the string is not') do
+    expect(''.word_frequency('a')).to(eq(0))
+  end
+
   # # * The word given is not empty but the string is; output is 0.
   # it('') do
   #   expect(''.word_frequency()).to(eq())
