@@ -36,11 +36,11 @@ describe('String#word_frequency') do
     expect('b'.word_frequency()).to(eq(0))
   end
 
-  # # * The word given is exactly the same as the string; output is 1.
-  # it('') do
-  #   expect(''.word_frequency()).to(eq())
-  # end
-  #
+  # * The word given is exactly the same as the string; output is 1.
+  it('returns 1 when the test word and the test string are the same') do
+    expect('cat'.word_frequency('cat')).to(eq(1))
+  end
+
   # # * The word given is not in the one-word string; output is 0.
   # it('') do
   #   expect(''.word_frequency()).to(eq())
