@@ -51,12 +51,12 @@ describe('String#word_frequency') do
     expect('yak'.word_frequency('cat')).to(eq(0))
   end
 
-  # * Capital letters shouldn't matter for the test word
+  # * Capital letters shouldn't matter for the test word.
   it('handles capital letters in the test word') do
     expect('Cat'.word_frequency('cat')).to(eq(1))
   end
 
-  # * Capital letters shouldn't matter for the test string
+  # * Capital letters shouldn't matter for the test string.
   it('handles capital letters in the test string') do
     expect('yak'.word_frequency('yaK')).to(eq(1))
   end
@@ -65,6 +65,12 @@ describe('String#word_frequency') do
   it('handles multiple occurances of the test word in the test string') do
     expect('buffalo'.word_frequency('buffalo buffalo buffalo cats')).to(eq(3))
   end
+
+  # * It has no problems ignoring basic punctuation.
+  it('ignores basic punctuation') do
+    expect('cat'.word_frequency('cat, cat; cat! cat? cat:')).to(eq(5))
+  end
+
 
   # # * The word given is a subset of a larger word in the string, such as
   # #   'tac' is a subset of 'attack', appearing once; output is 0.
