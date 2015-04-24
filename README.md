@@ -4,7 +4,7 @@ April 24, 2015
 word_frequency: A web-app that takes a user inputted word and string and
 outputs frequency of that word in the string.
 
-See the app deployed at lit-hollows-7808.herokuapp.com/
+See the app deployed at <a href='https://lit-hollows-7808.herokuapp.com/'> Heroku</a>
 
 Built and tested with:
   * Ruby 2.2.0
